@@ -1,0 +1,310 @@
+/* INICIALS */
+
+@charset "UTF-8";
+
+html
+{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: gray;
+    font-size: 10pt;
+    font-family: 'Calibri';
+    text-align: left;
+}
+
+/* COMUNS */
+
+input,
+progress
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+input
+{
+    height: 19px;
+    padding: 2px 1px;
+    border: solid 1px gray;
+}
+input[type="number"]
+{
+    text-align: right;
+    width: 50px;
+    color: red;
+    font-weight: bold;
+}
+input[type="number"]::-webkit-inner-spin-button
+{
+    opacity: 1;
+}
+progress
+{
+    width: 300px;
+    height: 19px;
+}
+progress[value]
+{
+    border: none;
+    margin: 0;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 1px gray;
+}
+progress[value]::-webkit-progress-bar
+{
+    border-radius: 10px;
+    background-color: white;
+}
+progress[value]::-webkit-progress-value
+{
+    border-radius: 10px;
+    background-color: red;
+}
+progress[value]::-moz-progress-bar
+{
+    border-radius: 10px;
+    background-color: red;
+}
+label
+{
+    display: inline-block;
+    text-align: right;
+    width: 25px;
+    vertical-align: top;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 1em;
+}
+ul>li::marker
+{
+    color: red;
+}
+a
+{
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+#output
+{
+    display: flex;
+    flex-direction: column;
+}
+.no_controllers
+{
+    font-size: 12pt;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 2em;
+    padding: 2em 0;
+}
+.gamepad_cont
+{
+    display: flex;
+    background-color: black;
+    color: gray;
+    padding: 10px;
+    margin: 5px;
+}
+.gamepad_cont b
+{
+    color: white;
+}
+.gamepad_cont i
+{
+    color: silver;
+}
+.gamepad_head
+{
+    display: inline-block;
+}
+.cont
+{
+    position: relative;
+    display: inline-block;
+    height: 225px;
+    padding-left: 10px;
+    box-sizing: content-box;
+}
+.gamepad_position
+{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+}
+.joystick
+{
+    width: 175px;
+    height: 190px;
+    border-radius: 10px;
+    padding: 5px;
+    background: radial-gradient(#888 60%, #333);
+    text-align: center;
+    box-sizing: border-box;
+}
+.middle
+{
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    width: 250px;
+    height: 135px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #999;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.digital
+{
+    position: absolute;
+    top: 20px;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    padding: 15px;
+    background: radial-gradient(circle at 67.5px 67.5px, white, #333);
+    text-align: center;
+    box-sizing: border-box;
+}
+.area
+{
+    position: absolute;
+    top: 110px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.joypad
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.button1,
+.button2
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background: radial-gradient(closest-side, red 50%, #333);
+    border-radius: 50%;
+    padding: 5px 0;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+.button1.pressed,
+.button2.pressed
+{
+    color: red;
+    background: linear-gradient(#333 15%, black 75%, #333);
+}
+.button1
+{
+    margin: 2px 11px;
+}
+.button2
+{
+    margin: 5px;
+}
+.button3
+{
+    display: inline-block;
+    color: white;
+    background: radial-gradient(closest-side, black 50%, #333);
+    padding: 4px 7px;
+    font-weight: bold;
+}
+.button3.pressed
+{
+    color: black;
+    background: radial-gradient(closest-side, red 50%, #333);
+}
+.button4
+{
+    position: absolute;
+    top: 7px;
+    width: 40px;
+    height: 20px;
+    line-height: 1;
+    color: white;
+    background: radial-gradient(red 25%, #333);
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+.button4.pressed
+{
+    top: 15px;
+    height: 10px;
+    color: red;
+    background: radial-gradient(white 25%, #333);
+}
+.label
+{
+    position: absolute;
+    top: 15px;
+    color: white;
+    font-weight: bold;
+}
+.throttle
+{
+    position: absolute;
+    top: 15px;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.throttle-background
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
+    background: red;
+    transform-origin: 0 0;
+}
+.throttle-circle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
+    background: white;
+    transform-origin: 0 0;
+}
+.true
+{
+    background-color: green;
+    padding: 0 2px;
+}
+.false
+{
+    background-color: red;
+}
